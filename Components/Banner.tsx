@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import React from "react";
 import { assets } from "../public/assets/assets";
@@ -10,7 +10,10 @@ const Banner = () => {
         <p className="font-bold text-[52px] leading-24 text-[#FFFFFF] mb-[36px]">
           Book Appointment
         </p>
-        <p className="font-bold text-[52px] leading-24 text-[#FFFFFF] mb-[36px]"> With 100+ Trusted Doctors</p>
+        <p className="font-bold text-[52px] leading-24 text-[#FFFFFF] mb-[36px]">
+          {" "}
+          With 100+ Trusted Doctors
+        </p>
         <Link href="/Login">
           <button
             onClick={() => scrollTo(0, 0)}
