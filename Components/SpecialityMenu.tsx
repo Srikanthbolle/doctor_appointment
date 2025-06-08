@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -15,7 +16,7 @@ const SpecialityMenu = () => {
           return (
 
 
-            <Link key={index} href={`/Doctors/${item.speciality}`} className="flex flex-col gap-6">
+            <Link onClick={()=>scrollTo(0,0)} key={index} href={`/Doctors/${item.speciality}`} className="flex flex-col gap-6 flex-shrink-0 hover:translate-y-[-10px] transition-all duration-500">
               <Image
                 src={item.image}
                 width={126}
