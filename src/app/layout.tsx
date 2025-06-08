@@ -1,38 +1,19 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-// import Navigation from "./components/Navigation";
+import { AppContextProvider } from "../../context/AppContext";
+import FooterSection from "../../Components/FooterSection";
+import Navbar from "../../Components/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  title: "Prescripto",
-  description: "Doctor Appointment App",
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {/* <div>
-          {" "}
-          <Navigation />{" "}
-        </div> */}
-        {children}
+      <body>
+        <AppContextProvider>
+          <Navbar />
+          {children}
+          <FooterSection />
+        </AppContextProvider>
       </body>
     </html>
   );
