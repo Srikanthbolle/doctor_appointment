@@ -22,7 +22,7 @@ const TopDoctors = () => {
         {doctors.slice(0, 10).map((item, index) => {
           return (
             <div key={index} className="border border-[#C9D8FF] rounded-md transform transition duration-300 hover:scale-105 hover:shadow-[1px_10px_10px_-10px_rgba(0,0,24,0.5)]">
-             <Link href={`/Appointment/${item._id}`}>
+             <Link href={`/Appointment/${item._id}`} onClick={()=>scrollTo(0,0)}>
               <Image
                 src={item.image}
                 width={274}
