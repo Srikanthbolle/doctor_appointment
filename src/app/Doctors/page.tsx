@@ -14,12 +14,11 @@ const page= ()=> {
   const [filterDocs, setFilterDocs] = useState([]);
   const { doctors } = useContext(AppContext);
   const router = useRouter();
-  console.log("docs", doctors);
+  
   const params = useParams();
   const speciality = params.speciality;
-  console.log(speciality, "ss");
+  
   const filterData = () => {
-    console.log("sp", speciality);
     if (speciality) {
       setFilterDocs(doctors.filter((doc) => doc.speciality === speciality));
     } else {
@@ -41,14 +40,14 @@ const page= ()=> {
             <li
               onClick={() =>
                 router.push(
-                  speciality === "Generalphysician"
+                  speciality === "General physician"
                     ? "/Doctors"
                     : "/Doctors/General physician"
                 )
               }
               className="text-[#4B5563] w-[260px] hover:bg-[#E2E5FF] rounded-md font-normal text-[16px] bg-white border border-[#B4B4B4] px-2 py-4 mb-4"
             >
-              General physician
+             General physician
             </li>
             <li
               onClick={() =>
@@ -58,7 +57,7 @@ const page= ()=> {
                     : "/Doctors/Gynecologist"
                 )
               }
-              className="text-[#4B5563] w-[260px] hover:bg-[#E2E5FF] rounded-md font-normal text-[16px] bg-white border border-[#B4B4B4] px-2 py-4 mb-4"
+              className={`text-[#4B5563] w-[260px] hover:bg-[#E2E5FF] rounded-md font-normal text-[16px] bg-white border border-[#B4B4B4] px-2 py-4 mb-4 ${speciality==="Gynecologist"?"text-black bg-indigo-300":""}`}
             >
               Gynecologist
             </li>
@@ -112,9 +111,9 @@ const page= ()=> {
             </li>
           </ul>
         </div>
-        <div className="flex gap-6">
+        <div className="grid grid-cols-4 gap-6">
           {filterDocs.map((item, index) => {
-            console.log("i", item);
+           
             return (
               <div
                 key={index}

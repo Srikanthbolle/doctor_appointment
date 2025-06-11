@@ -7,7 +7,8 @@ import { Doctor } from "../types";
 export const AppContext = createContext<{ doctors: Doctor[] }>({ doctors: [] });
 
 export const AppContextProvider = ({ children }: { children: React.ReactNode }) => {
-  const value = { doctors };
+    const currencySymbol = "$"
+  const value = { doctors,currencySymbol };
   
   return (
     <AppContext.Provider value={value}>

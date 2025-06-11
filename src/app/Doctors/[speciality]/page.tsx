@@ -10,12 +10,11 @@ export default function DoctorSpecialty() {
   const [filterDocs, setFilterDocs] = useState([]);
   const { doctors } = useContext(AppContext);
   const router = useRouter();
-  console.log("docs", doctors);
+  
   const params = useParams();
   const speciality = params.speciality;
-  console.log(speciality, "ss");
+ 
   const filterData = () => {
-    console.log("sp", speciality);
     if (speciality) {
       setFilterDocs(doctors.filter((doc) => doc.speciality === speciality));
     } else {
@@ -37,14 +36,14 @@ export default function DoctorSpecialty() {
             <li
               onClick={() =>
                 router.push(
-                  speciality === "Generalphysician"
+                  speciality === "General physician"
                     ? "/Doctors"
-                    : "/Doctors/Generalphysician"
+                    : "/Doctors/General physician"
                 )
               }
               className="text-[#4B5563] w-[260px] hover:bg-[#E2E5FF] rounded-md font-normal text-[16px] bg-white border border-[#B4B4B4] px-2 py-4 mb-4"
             >
-              Generalphysician
+              General physician
             </li>
             <li
               onClick={() =>
@@ -54,7 +53,7 @@ export default function DoctorSpecialty() {
                     : "/Doctors/Gynecologist"
                 )
               }
-              className="text-[#4B5563] w-[260px] hover:bg-[#E2E5FF] rounded-md font-normal text-[16px] bg-white border border-[#B4B4B4] px-2 py-4 mb-4"
+              className={`text-[#4B5563] w-[260px] hover:bg-[#E2E5FF] rounded-md font-normal text-[16px] bg-white border border-[#B4B4B4] px-2 py-4 mb-4 ${speciality==="Gynecologist"?"text-black bg-indigo-100":""}`}
             >
               Gynecologist
             </li>
