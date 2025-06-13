@@ -1,7 +1,8 @@
-@tailwind base;
-@tailwind Components;
-@tailwind utilities;
-
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+*{
+  font-family: Outfit;
+}
 /* @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 *{
   font-family: Outfit;
