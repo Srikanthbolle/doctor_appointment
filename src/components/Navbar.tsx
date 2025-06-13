@@ -6,11 +6,12 @@ import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const Navbar = () => {
+  const [isActive,setIsActive] = useState(false)
   const [showMenu, setShowMenu] = useState(false);
   const [token, SetToken] = useState(true);
   const router = useRouter();
   const handleClick = () => {
-    router.push("/login");
+    router.push("/Login");
   };
   const handleMyProfile = () => {
     router.push("/MyProfile");
