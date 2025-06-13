@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+
+
 export default function Contact() {
   return (
     <div>
@@ -7,7 +9,7 @@ export default function Contact() {
 <p>CONTACT <span className="text-gray-700 font-semibold">US</span></p>
     </div>
     <div className="my-10 flex flex-col justify-center md:flex-row gap-10 mb-28 text-sm">
-      <Image className="w-full max-w-[360px]" src="assets/contact_image.png" width={560} height={560} alt="contact_image"/>
+      <Image className="w-full max-w-[360px]" src="/assets/contact_image.png" width={560} height={560} alt="contact_image"/>
       <div className="flex flex-col justify-center items-start gap-6">
         <p className="font-semibold text-lg text-gray-600">Our OFFICE</p>
         <p className="text-gray-500">54709 Willms Station <br/>

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { AppContext } from '../context/AppContext'
+import { AppContext } from '../../context/AppContext'
 import Link from 'next/link'
 import Image from 'next/image'
 

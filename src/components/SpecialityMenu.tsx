@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { specialityData } from "../public/assets/assets";
+import { specialityData } from "../../public/assets/assets";
 const SpecialityMenu = () => {
   return (
     <div className="flex flex-col justify-center items-center pt-[120px]" id="speciality">

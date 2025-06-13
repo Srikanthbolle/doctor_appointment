@@ -1,9 +1,9 @@
-import Banner from "../../Components/Banner";
-import FooterSection from "../../Components/FooterSection";
-import Header from "../../Components/Header";
-import Navbar from "../../Components/Navbar";
-import SpecialityMenu from "../../Components/SpecialityMenu";
-import TopDoctors from "../../Components/TopDoctors";
+import Banner from "../components/Banner";
+import FooterSection from "../components/FooterSection";
+import Header from "../components/Header";
+import Navbar from "../components/Navbar";
+import SpecialityMenu from "../components/SpecialityMenu";
+import TopDoctors from "../components/TopDoctors";
 
 export default function Home() {
   return (

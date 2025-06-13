@@ -5,7 +5,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { AppContext } from "../../../../context/AppContext";
 import Image from "next/image";
 import Link from "next/link";
-import RelatedDoctors from "../../../../Components/RelatedDoctors";
+import RelatedDoctors from "../../../components/RelatedDoctors";
 
 const Page = () => {
   const [docInfo, setDocInfo] = useState<any>(null);
