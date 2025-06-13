@@ -5,7 +5,7 @@ import * as React from "react"; // ✅ Ensures all hooks are available
 // import { doctors } from "../public/assets/assets";
 import Image from "next/image";
 import Link from "next/link";
-import { AppContext, useAppContext } from "../context/AppContext";
+import { AppContext, useAppContext } from "../../context/AppContext";
 
 const TopDoctors = () => {
    const { doctors } = useAppContext();
