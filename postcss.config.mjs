@@ -1,11 +1,8 @@
-import scrollbarHide from 'tailwind-scrollbar-hide'
-const config = {
-  plugins: ["@tailwindcss/postcss",scrollbarHide],
-};
-module.exports = {
+export default {
   plugins: {
-    tailwindcss: {},
+    '@tailwindcss/postcss': {
+      config: './tailwind.config.ts'
+    },
     autoprefixer: {},
-  },
-};
-export default config;
+  }
+}
